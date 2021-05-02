@@ -1,0 +1,64 @@
+{
+    "lowlevel.hfc.mean": [
+        8.757505831624712e-09
+    ],
+    "lowlevel.mfcc.mean": [
+        [
+            -1264.921875,
+            3.0517578125e-05,
+            -6.866455078125e-05,
+            3.0517578125e-05,
+            -8.0108642578125e-05,
+            6.866455078125e-05,
+            -3.0517578125e-05,
+            -6.866455078125e-05,
+            -4.9591064453125e-05,
+            -1.9073486328125e-05,
+            -2.288818359375e-05,
+            -1.9073486328125e-05,
+            -4.1961669921875e-05
+        ]
+    ],
+    "lowlevel.zerocrossingrate.mean": [
+        0.49701517820358276
+    ],
+    "lowlevel.spectral_energyband_low.mean": [
+        2.4457822919710104e-13
+    ],
+    "lowlevel.spectral_energyband_middle_low.mean": [
+        3.3107622546268978e-12
+    ],
+    "lowlevel.spectral_energyband_middle_high.mean": [
+        2.0918828735200234e-12
+    ],
+    "lowlevel.spectral_energyband_high.mean": [
+        3.508352191660541e-13
+    ],
+    "lowlevel.pitch_salience_mean": [
+        0.7916324138641357
+    ],
+    "lowlevel.inharmonicity.mean": [
+        0.16701078414916992
+    ],
+    "sfx.logattacktime.mean": [
+        -5.0
+    ],
+    "lowlevel.lpc": [
+        [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "lowlevel.spectralcentroid": [
+        1487.316162109375
+    ]
+}
