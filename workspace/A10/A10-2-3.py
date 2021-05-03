@@ -27,8 +27,8 @@ def extract_features():
 
                 # Computes sound energy and threshold
                 array_energy = np.square(np.abs(audio))
-                mean_energy = np.max(array_energy)
-                threshold = 0.3 * mean_energy
+                max_energy = np.max(array_energy)
+                threshold = 0.2 * max_energy
                 hop = 250
                 w_size = 1024
 
