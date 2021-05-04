@@ -97,8 +97,7 @@ def convFtrDict2List(ftrDict):
         ftr.extend(ftrDict[descriptorMapping[key]][0])
       else:
         ftr.append(ftrDict[descriptorMapping[key]][0])
-  # for value in ftrDict.values():
-  #       value = 
+    input(ftr)
   return np.array(ftr, dtype=float)
 
 
@@ -189,6 +188,7 @@ def clusterSounds(targetDir, nCluster = -1, descInput=[]):
   for cname in dataDetails.keys():
     #iterating over sounds
     for sname in dataDetails[cname].keys():
+      input(convFtrDict2List(dataDetails[cname][sname]['feature'])[descInput])
       ftrArr.append(convFtrDict2List(dataDetails[cname][sname]['feature'])[descInput])
       infoArr.append([sname, cname])
   

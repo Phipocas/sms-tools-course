@@ -3,9 +3,6 @@ import os
 import json
 import numpy as np
 import soundAnalysis as SA
-import soundDownload as SD
-
-os.chdir("/Users/marcoferreira/Now/Programming/Audio DSP/sms-tools-master/workspace/A9")
 
 def extract_features():
 
@@ -32,7 +29,7 @@ def extract_features():
                 hop = 250
                 w_size = 1024
 
-                for frame in E.FrameGenerator(audio, frameSize = w_size, hopSize = hop, startFromZero=True):
+                for i, frame in enumerate(ess.FrameGenerator(audio, frameSize = w_size, hopSize = hop, startFromZero=True)):
                     frame_energy = np.square(np.abs(frame))
                     frame_mean_energy = np.mean(frame_energy)
                     if frame_mean_energy < threshold:
@@ -75,7 +72,6 @@ def extract_features():
                             "lowlevel.lpc":[lpc_coeffs.tolist()],
                             "lowlevel.spectralcentroid":[centroid]
                             }
-
                 
 
                 # Dump features into JSON file 
@@ -86,7 +82,7 @@ def cluster_sounds():
     accuracy = np.array([])
     desc_list = [i for i in range(10)]
     for i in range(num_clusters):  
-        accuracy = np.append(accuracy, SA.clusterSounds("Data", nCluster = num_clusters, descInput=[0,1,2,3,4,5,6,7,8,9]))
+        accuracy = np.append(accuracy, SA.clusterSounds("Data", nCluster = num_clusters, descInput=[3]))
     acc_mean = np.mean(accuracy)
 
     print("\n")
@@ -96,5 +92,5 @@ def cluster_sounds():
 
 if __name__ == '__main__':
 
-    extract_features()
-    # cluster_sounds() 
+    # extract_features()
+    cluster_sounds() 
