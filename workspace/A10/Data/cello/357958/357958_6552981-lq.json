@@ -1,0 +1,53 @@
+{
+    "lowlevel.mfcc.mean.0": [
+        -917.9627728584485
+    ],
+    "lowlevel.mfcc.mean.1": [
+        119.12546099149264
+    ],
+    "lowlevel.mfcc.mean.2": [
+        -56.299345688942154
+    ],
+    "lowlevel.mfcc.mean.3": [
+        -18.47913546439929
+    ],
+    "lowlevel.mfcc.mean.4": [
+        -15.73036373578585
+    ],
+    "lowlevel.mfcc.mean.5": [
+        -13.912212909796299
+    ],
+    "lowlevel.mfcc.mean.6": [
+        -15.193740056111263
+    ],
+    "lowlevel.mfcc.mean.7": [
+        4.171980368785369
+    ],
+    "lowlevel.mfcc.mean.8": [
+        -6.64949351701981
+    ],
+    "lowlevel.mfcc.mean.9": [
+        -10.17134840060503
+    ],
+    "lowlevel.mfcc.mean.10": [
+        -15.131596650832739
+    ],
+    "lowlevel.mfcc.mean.11": [
+        -17.652365122085964
+    ],
+    "lowlevel.mfcc.mean.12": [
+        -2.6418272042885804
+    ],
+    "sfx.logattacktime.mean": [
+        -0.26101818680763245
+    ],
+    "lowlevel.inharmonicity.mean": [
+        0.05949994066479401
+    ],
+    "lowlevel.zerocrossingrate.mean": [
+        0.16255070612980768
+    ],
+    "lowlevel.spectralcentroid": [
+        1003.6189575195312
+    ]
+}

@@ -7,20 +7,38 @@ from scipy.cluster.vq import vq, kmeans, whiten
 # from scipy.stats import mode
 
 # Mapping of descriptors
-descriptorMapping = { 0: 'lowlevel.inharmonicity.mean',
-                      1: 'lowlevel.hfc.mean',
-                      2: 'sfx.logattacktime.mean',
-                      3: 'lowlevel.mfcc.mean',
-                      4: 'lowlevel.zerocrossingrate.mean',
-                      5: 'lowlevel.spectral_energyband_low.mean',
-                      6: 'lowlevel.spectral_energyband_middle_low.mean',
-                      7: 'lowlevel.spectral_energyband_middle_high.mean',
-                      8: 'lowlevel.spectral_energyband_high.mean',
-                      9: 'lowlevel.pitch_salience_mean',
-                      10: 'lowlevel.lpc',
-                      11: 'lowlevel.spectralcentroid',
-                    }
-
+# descriptorMapping = { 0: 'lowlevel.inharmonicity.mean',
+#                       1: 'lowlevel.hfc.mean',
+#                       2: 'sfx.logattacktime.mean',
+#                       3: 'lowlevel.mfcc.mean',
+#                       4: 'lowlevel.zerocrossingrate.mean',
+#                       5: 'lowlevel.spectral_energyband_low.mean',
+#                       6: 'lowlevel.spectral_energyband_middle_low.mean',
+#                       7: 'lowlevel.spectral_energyband_middle_high.mean',
+#                       8: 'lowlevel.spectral_energyband_high.mean',
+#                       9: 'lowlevel.pitch_salience_mean',
+#                       10: 'lowlevel.lpc',
+#                       11: 'lowlevel.spectralcentroid',
+#                     }
+descriptorMapping = { 0: "lowlevel.mfcc.mean.0", 
+                      1: "lowlevel.mfcc.mean.1",
+                      2: "lowlevel.mfcc.mean.2",
+                      3: "lowlevel.mfcc.mean.3",
+                      4: "lowlevel.mfcc.mean.4",
+                      5: "lowlevel.mfcc.mean.5",
+                      6: "lowlevel.mfcc.mean.6",
+                      7: "lowlevel.mfcc.mean.7",
+                      8: "lowlevel.mfcc.mean.8",
+                      9: "lowlevel.mfcc.mean.9",
+                      10: "lowlevel.mfcc.mean.10",
+                      11: "lowlevel.mfcc.mean.11",
+                      12: "lowlevel.mfcc.mean.12",
+                      13: "sfx.logattacktime.mean",
+                      14: "lowlevel.inharmonicity.mean",
+                      15: "lowlevel.inharmonicity.mean",
+                      16: "lowlevel.zerocrossingrate.mean",
+                      17:"lowlevel.spectralcentroid"
+}
 def showDescriptorMapping():
   """
   This function prints the mapping of integers to sound descriptors.
@@ -94,10 +112,10 @@ def convFtrDict2List(ftrDict):
       ftr.append(ftrDict[ftrName][0][ind])
     except:
       if key == 3 or key == 10:
-        ftr.extend(ftrDict[descriptorMapping[key]][0])
+        # ftr.extend(ftrDict[descriptorMapping[key]][0])
+        ftr.append(ftrDict[descriptorMapping[key]][0])
       else:
         ftr.append(ftrDict[descriptorMapping[key]][0])
-    input(ftr)
   return np.array(ftr, dtype=float)
 
 
@@ -188,7 +206,8 @@ def clusterSounds(targetDir, nCluster = -1, descInput=[]):
   for cname in dataDetails.keys():
     #iterating over sounds
     for sname in dataDetails[cname].keys():
-      input(convFtrDict2List(dataDetails[cname][sname]['feature'])[descInput])
+      # input(sname)
+      # input(convFtrDict2List(dataDetails[cname][sname]['feature'])[descInput])
       ftrArr.append(convFtrDict2List(dataDetails[cname][sname]['feature'])[descInput])
       infoArr.append([sname, cname])
   
